@@ -1,0 +1,34 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;                                                                         ;
+; TOP File Created by Progamme DL2GRMX from DL_POLY input files           ;
+; Produced by Polaris at Colledge of Chemistry, Nankai University, P.R.C. ;
+; Model Name: DG-THF-PF6-Na    Amber RESP  Created Time: 2025-06-05 11:38:51     ;
+;                                                                         ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+[ defaults ]
+; nbfunc         comb-rule      gen-pairs      fudgeLJ        fudgeQQ        
+  1              3              yes            0.5            0.5            
+
+#include "nonbond.itp"
+#include "DG.itp"
+#include "THF.itp"
+#include "PF6-.itp"
+#include "Na+.itp"
+
+[ system ]
+DG-THF-PF6-Na    Amber RESP
+
+[ molecules ]
+; molecule name     mol  
+DG                  410
+THF                 410
+PF6-                100
+Na+                 100
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                                                       ;;
+;;                   This is the bottom of the TOP file.                 ;;
+;;                                                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
