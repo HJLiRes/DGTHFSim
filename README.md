@@ -1,4 +1,4 @@
-# Molecular Dynamics Simulation Input files for 1 M NaPF6 in DG/THF Electrolytes
+# Molecular Dynamics Simulation Input Files for 1 M NaPF6 in DG/THF Electrolytes
 
 ## Overview
 
