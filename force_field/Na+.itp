@@ -1,0 +1,22 @@
+[ moleculetype ]
+; name        nrexcl
+Na+                3
+
+[ atoms ]
+;   nr    type   resnr  residu    atom    cgnr    charge
+     1      Na       1     Na+      N1       1     0.779
+
+[ bonds ]
+;   ai    aj funct             b0             kb
+
+[ angles ]
+;   ai    aj    ak funct            th0            cth
+
+[ dihedrals ]
+;   ai    aj    ak    al funct         phi0         kphi         mult
+
+[ pairs ]
+;   ai    aj funct     V(sigma)   W(epsinal)
+
+[ position_restraints ]
+;   ai   funct      fc
