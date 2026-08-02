@@ -71,7 +71,7 @@ reported in this study.
 
 | File/Directory            | Description               |
 |---------------------------|---------------------------|
-| `force_field/`            | Force-field parameter files used for all electrolyte systems. |
+| `force_field/`            | Force-field parameter files used for corresponding electrolyte systems. |
 | `force_field/DG.itp`      | Molecular topology file for DG. |
 | `force_field/THF.itp`     | Molecular topology file for THF. |
 | `force_field/PF6-.itp`    | Molecular topology file for PF6-. |
