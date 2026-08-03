@@ -1,25 +1,29 @@
-# Molecular Dynamics Simulation Input Files for 1 M NaPF6 in DG/THF Electrolytes
+# Molecular Dynamics Simulation Files for 1 M NaPF6 in DG/THF Mixed Electrolytes
 
 ## Overview
 
-This repository contains the molecular dynamics (MD) simulation input files
-used in the study of 1 M NaPF6 electrolytes with various diglyme (DG)/
+This repository contains the molecular dynamics (MD) simulation files used in
+the study of 1 M NaPF6 electrolytes with different diglyme (DG)/
 tetrahydrofuran (THF) molar ratios.
 
-Classical molecular dynamics simulations were performed using the GROMACS 
-package to investigate the solvation structures, ion association behaviors, 
-and ion transport properties of mixed strongly solvating electrolyte (SSE)/
-weakly solvating electrolyte (WSE) systems.
+Classical MD simulations were performed using the GROMACS package to
+investigate the solvation structures, ion association behaviors, and ion
+transport properties of mixed strongly solvating electrolyte (SSE)/weakly
+solvating electrolyte (WSE) systems.
 
-The repository provides the essential input files required to reproduce the
-NVT production simulations, including force-field parameters, molecular
-topologies files, simulation parameters files, and initial configurations.
+By systematically tuning the DG/THF molar ratio, this study reveals the
+molecular-level relationship between Na+ solvation structures, ion association
+behaviors, and ionic conductivity evolution in mixed SSE/WSE electrolytes.
+
+This repository provides the essential input files required to reproduce the
+MD simulations, including force-field parameters, molecular topology files,
+GROMACS simulation parameter files, and initial electrolyte configurations.
 
 ------------------------------------------------------------------------
 
 ## Simulation Systems
 
-Nine electrolyte compositions were investigated with different DG/THF molar 
+Nine electrolyte compositions were investigated with different DG/THF molar
 ratios:
 
 | System ID  | DG/THF molar ratio |
@@ -34,36 +38,13 @@ ratios:
 | DG_THF_2_1 | 2/1 |
 | DG_THF_1_0 | 1/0 |
 
-For each electrolyte composition, five independent NVT production simulations
-were performed using different initial configurations to obtain statistically
-reliable averaged values and standard deviations.
+All systems correspond to 1 M NaPF6 electrolytes.
 
-Each independent simulation contains a corresponding initial configuration 
-file (`systems/*/confout_*.gro`).
+For each electrolyte composition, five independent simulations were performed
+using different initial configurations to obtain statistically reliable results.
 
-------------------------------------------------------------------------
-
-## Simulation Protocol
-
-All molecular dynamics simulations were performed using the GROMACS package.
-
-The NVT production simulations were conducted using the GROMACS parameter file:
-`mdp/mdout.mdp`
-
-Identical force-field parameters and simulation settings were applied to all 
-electrolyte compositions to ensure consistent comparison among different 
-DG/THF systems.
-
-The simulation inputs provided in this repository include:
-
-- Molecular force-field parameters
-- Topology definitions
-- Nonbonded interaction parameters
-- GROMACS simulation parameters
-- Initial molecular configurations
-
-These files allow direct reproduction of the NVT production simulations 
-reported in this study.
+The initial configurations for independent simulations are provided as:
+`systems/*/confout_*.gro`
 
 ------------------------------------------------------------------------
 
@@ -71,24 +52,23 @@ reported in this study.
 
 | File/Directory            | Description               |
 |---------------------------|---------------------------|
-| `force_field/`            | Force-field parameter files used for corresponding electrolyte systems. |
-| `force_field/DG.itp`      | Molecular topology file for DG. |
-| `force_field/THF.itp`     | Molecular topology file for THF. |
-| `force_field/PF6-.itp`    | Molecular topology file for PF6-. |
-| `force_field/Na+.itp`     | Molecular topology file for Na+. |
-| `mdp/mdout.mdp`           | GROMACS molecular dynamics parameter file used for the NVT production simulations. |
-| `systems/`                | Initial configurations and topology files for all electrolyte compositions investigated in this study. |
-| `systems/*/confout_*.gro` | Initial configuration files for the five independent NVT production simulations for each electrolyte system. |
-| `systems/*/topol.top`     | GROMACS topology files defining the molecular composition and force-field inclusion for each electrolyte system. |
-| `systems/*/nonbond.itp`   | Nonbonded interaction parameters for each electrolyte system. |
-| `README.md`               | Description of the repository, simulation details, file organization, and reproduction instructions. |
+| `force_field/`            | Force-field parameter files used in MD simulations |
+| `force_field/DG.itp`      | Molecular topology file for diglyme (DG) |
+| `force_field/THF.itp`     | Molecular topology file for tetrahydrofuran (THF) |
+| `force_field/PF6-.itp`    | Molecular topology file for PF6- |
+| `force_field/Na+.itp`     | Molecular topology file for Na+ |
+| `mdp/mdout.mdp`           | GROMACS parameter file for MD production simulations |
+| `systems/`                | Initial configurations and topology files for all electrolyte systems |
+| `systems/*/confout_*.gro` | Initial configuration for five independent simulations |
+| `systems/*/topol.top`     | GROMACS topology files defining system compositions and interactions |
+| `systems/*/nonbond.itp`   | Nonbonded interaction parameters |
+| `README.md`               | Description of the repository and file organization |
 
 ------------------------------------------------------------------------
 
 ## Reproduction of NVT Production Simulations
 
-A typical NVT production simulation can be prepared using the following 
-GROMACS command:
+A typical simulation can be prepared using the following GROMACS command:
 
 ```bash
 gmx grompp \
@@ -98,30 +78,33 @@ gmx grompp \
 -o md.tpr
 ```
 
-The production simulation can then be performed using:
+The simulation can then be performed using:
 
 ```bash
 gmx mdrun -s md.tpr
 ```
-
 Before running the simulations, ensure that all required force-field files are
-located in the appropriate directories and correctly referenced in the topology
-file (`systems/*/topol.top`).
+correctly located and referenced in the topology files.
+
+The provided files allow reproduction of the MD simulations reported in this
+study.
 
 ------------------------------------------------------------------------
 
 ## Data Availability
 
-The molecular dynamics simulation input files used in this study, including
-force-field parameters, GROMACS simulation parameters, topology files, and
-initial configurations, are openly available in this repository.
+All data supporting the findings of this study are available in the article and
+its Supporting Information.
+
+The GROMACS simulation files used in this study, including force-field
+parameters, topology files, simulation parameter files, and initial
+configurations, are openly available in this repository.
 
 ------------------------------------------------------------------------
 
 ## Citation
 
-If you use the simulation input files provided in this repository, please cite the
-following publication:
+If you use the simulation files provided in this repository, please cite:
 
 Authors:
 Hongjin Li, Tao Wang, Shu Li, Tianying Yan
