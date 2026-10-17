@@ -105,18 +105,4 @@ configurations, are openly available in this repository.
 ## Citation
 
 If you use the simulation files provided in this repository, please cite:
-
-Authors:
-Hongjin Li, Tao Wang, Shu Li, Tianying Yan
-
-Title:
-The Effects of Strongly and Weakly Solvating Electrolytes on Ionic Conductivity in Sodium-Ion Battery Electrolytes
-
-Journal:
-
-Year:
-
-DOI:
-
-
-
+Hongjin Li, Tao Wang, Shu Li, Tianying Yan; Effects of Strongly and Weakly Solvating Electrolytes on Ionic Conductivity in Sodium-Ion Battery Electrolytes. J. Phys. Chem. Lett. 2026, 17 (40), 11674–11681.
